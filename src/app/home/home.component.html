@@ -1,0 +1,21 @@
+<ActionBar title="Home" >
+    <ActionItem tap="onShare"
+        ios.systemIcon="9" ios.position="left"
+        android.systemIcon="ic_menu_share"  android.position="actionBar" tap="showSideDrawer"></ActionItem>
+    <ActionItem tap="onDelete" text="delete" 
+        ios.systemIcon="16" ios.position="right"
+        android.position="popup"
+        tap="showSideDrawer"></ActionItem>
+</ActionBar>
+
+<ScrollView class="layoutBackgroundImageFromRes m-b-20">
+<StackLayout class="form m-b-25 p-b-15">
+    <Image class="logo"    src="~/app/images/Logo2.png"></Image>
+    <Image [src]="imageTaken"  class="imgTaken " stretch="aspectFill"></Image>
+    <Button text="Take Photo" class="btn btn-primary" (tap)="onTakePhoto()" flexGrow="1"></Button>
+    <TextView  hint="Enter some text"  [editable]="false" text= "{{ res }}"
+    class="input input-border input_centred m-b-50 m-l-5 m-r-5"></TextView>
+</StackLayout>
+</ScrollView>
+
+<BottomBar row="1" class="m-t-10" (tabSelected)="tabSelected($event)"></BottomBar>

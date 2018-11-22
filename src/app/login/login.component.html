@@ -1,0 +1,33 @@
+<FlexboxLayout class="page">
+	<StackLayout  class="form layoutBackgroundImageFromRes">
+        <Image class="logo" src="~/app/images/Logo2.png"></Image>
+		<Label class="header" text="SINWAY"></Label>
+        
+		<GridLayout rows="auto, auto, auto">
+			<StackLayout row="0" class="input-field">
+				<TextField class="input" hint="Email" [isEnabled]="!processing" keyboardType="email" [(ngModel)]="user.email" autocorrect="false" autocapitalizationType="none"  returnKeyType="next" ></TextField>
+				<StackLayout class="hr-light"></StackLayout>
+			</StackLayout>
+
+			<StackLayout row="1" class="input-field">
+				<TextField #password class="input" [isEnabled]="!processing" hint="Password" [(ngModel)]="user.password" secure="true" ></TextField>
+				<StackLayout class="hr-light"></StackLayout>
+			</StackLayout>
+
+
+			<ActivityIndicator rowSpan="1" color="#FFFFFF" [busy]="processing"></ActivityIndicator>
+		</GridLayout>
+
+		<Button [text]="true ? 'Log In' : 'Sign Up'" [isEnabled]="!processing"  class="btn btn-primary m-t-20" (tap)="submit()"><i class="material-icons">
+			exit_to_app
+			</i></Button>
+		<Label  text="Forgot your password?" class="login-label" ></Label>
+	</StackLayout>
+
+	<Label class="login-label sign-up-label" >
+		<FormattedString>
+			<Span>Don’t have an account?</Span>
+			<Span class="bold">Sign up</Span>
+		</FormattedString>
+	</Label>
+</FlexboxLayout>

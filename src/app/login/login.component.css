@@ -1,0 +1,64 @@
+.page {
+
+  }
+  .form {
+    flex-grow: 2;
+    vertical-align: middle;
+  }
+  
+  .logo {
+    margin-bottom: 12;
+    height: 90;
+    font-weight: bold;
+  }
+  .header {
+    horizontal-align: center;
+    font-size: 25;
+    font-weight: 600;
+    margin-bottom: 70;
+    text-align: center;
+    color: #6f6b96;
+  }
+  
+  .input-field {
+    margin-bottom: 25;
+  }
+  .input {
+    font-size: 18;
+    placeholder-color: antiquewhite;
+    color: white;
+   
+  }
+  .input:disabled {
+    background-color:transparent;
+    opacity: 0.3;
+  }
+  
+  .btn-primary {
+    height: 50;
+    margin: 30 5 15 5;
+    background-color: #49527f;
+    border-radius: 5;
+    font-size: 20;
+    font-weight: 600;
+  }
+  .btn-primary:disabled {
+    opacity: 0.5;
+  }
+  .login-label {
+    horizontal-align: center;
+    color: antiquewhite;
+    font-size: 16;
+  }
+  .sign-up-label {
+    margin-bottom: 0;
+  }
+  .bold {
+    color: #000000; 
+  }
+  .layoutBackgroundImageFromRes{
+    background: url(~/app/images/flatBackground.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+  

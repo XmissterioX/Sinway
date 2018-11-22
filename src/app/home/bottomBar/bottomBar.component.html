@@ -1,0 +1,17 @@
+<GridLayout height="60" verticalAlignment="bottom">
+	<GridLayout class="blur" columns="*, *, *" height="60" backgroundColor="#49527f">
+		<GridLayout #tabHighlight col="0" backgroundColor="#6f6b96"></GridLayout>
+		<GridLayout col="0" (tap)="selectTab(0)">
+			<Image #image1 src="~/app/assets/ic_cercle.png" height="23" width="23"></Image>
+		</GridLayout>
+		<GridLayout col="1" (tap)="selectTab(1)">
+			<Image #image2 src="~/app/assets/ic_square-rounded.png" height="25" width="25"></Image>
+		</GridLayout>
+		<GridLayout col="2" (tap)="selectTab(2)">
+			<Image #image3 src="~/app/assets/ic_triangle.png" height="25" width="25"></Image>
+		</GridLayout>
+
+		
+	</GridLayout>
+
+</GridLayout>
